@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-</head>
-<body>
-    
-    <livewire:counter />
-    
-</body>
-</html>
+<x-layouts.main_layout>
+    <x-slot:content>
+
+        <h1 class="display-6 text-center">LIVEWIRE</h1>
+        <hr>
+
+        <livewire:counter />
+
+        @php
+            $dynamic = "DYNA";    
+        @endphp
+
+        <h1 class="mt-5">INLINE</h1>
+        <livewire:inline-component value="Matth" :dynamicValue="$dynamic"/>
+    </x-slot:content>
+</x-layouts.main_layout>
