@@ -1,10 +1,9 @@
 <?php
 
+use App\Http\Controllers\MainController;
 use App\Livewire\Counter;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', [MainController::class, 'home'])->name('home');
 
-Route::get('/counter', Counter::class);
+/* Route::get('/counter', Counter::class); */
